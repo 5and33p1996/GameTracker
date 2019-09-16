@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relative_layout"
+    tools:context=".CreateTeam">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/create_league_toolbar"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <TextView
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_team_name"
+        android:text="Name of Team :"
+        android:textSize="20sp"
+        android:layout_below="@+id/create_league_toolbar"/>
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_of_team"
+        android:layout_toRightOf="@+id/textview_team_name"
+        android:layout_below="@+id/create_league_toolbar"/>
+
+    <TextView
+        android:paddingTop="40dp"
+        android:paddingBottom="50dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_player_no"
+        android:text="Number of Players :"
+        android:textSize="20sp"
+        android:layout_below="@+id/textview_team_name"/>
+    <EditText
+        android:paddingTop="35dp"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/number_of_players"
+        android:layout_toRightOf="@+id/textview_player_no"
+        android:layout_below="@+id/name_of_team" />
+
+    <Button
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:onClick="next"
+        android:id="@+id/next_button"
+        android:layout_below="@+id/textview_player_no" />
+
+    <Button
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_team_button"
+        android:text="Create Team"
+        android:enabled="false"
+        android:onClick="createTeam"
+        android:layout_below="@+id/next_button"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/create_team_button">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_layout"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
